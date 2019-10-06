@@ -16,6 +16,3 @@ Lighthouse is a budgeting software for small teams. It implements Galileo API.
   username: samhcam
   password: 5101520sam
 6. the website can be explored by the user, keep in mind that the basic idea of our program is to submit requests to the admin for review and approval or denial.
-
-### How to run lighthouse's backend:
-1. 
