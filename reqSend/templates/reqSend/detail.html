@@ -1,0 +1,12 @@
+<h1>{{ question.question_text }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="{% url 'reqSend:amount' request.id %}" method="post">
+{% csrf_token %}
+{% for expense in question.expense_set.all %}
+    <input type="radio" name="expense" id="expense{{ forloop.counter }}" value="{{ expense.id }}">
+    <label for="expense{{ forloop.counter }}">{{ expense.expense_text }}</label><br>
+{% endfor %}
+<input type="submit" value="Amount">
+</form>

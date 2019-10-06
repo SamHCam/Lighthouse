@@ -1,0 +1,9 @@
+<h1>{{ question.question_text }}</h1>
+
+<ul>
+{% for expense in request.expense_set.all %}
+    <li>{{ expense.choice_text }} -- {{ expense.votes }} vote{{ expense.votes|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="{% url 'reqSend:detail' request.id %}">Vote again?</a>
